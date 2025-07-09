@@ -1,0 +1,16 @@
+Для начала нужно включить поддержку Python скриптов в HA.
+Для этого нужно в configuration.yaml добавить строку:
+
+# Включение поддержки python скриптов 
+python_script:
+
+Добавить папку python_scripts, чтобы путь получился config/python_scripts
+и перезагрузить HA
+
+Далее все питон скрипты нужно склыдывать именно в эту папку.
+Использование:
+service: python_script.notify_all_devices_for_person
+data:
+  person_entity_id: person.aleksei # название персоны в HA
+  message: "Обнаружен дым!" # сообщение
+  title: "Критическое оповещение!" # тема
