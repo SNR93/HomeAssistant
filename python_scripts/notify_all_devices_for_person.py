@@ -1,13 +1,4 @@
-# пример вызова службы
-#service: python_script.notify_aleksei
-#data:
-#  person_entity_id: person.aleksei
-#  message: "Обнаружен дым!"
-#  title: "Критическое оповещение!"
-
-
-
-person_id = data.get('person_entity_id', 'person.aleksei')
+person_id = data.get('person_entity_id', 'person.name_person')
 message = data.get('message', 'Тестовое уведомление')
 title = data.get('title', 'Уведомление')
 
